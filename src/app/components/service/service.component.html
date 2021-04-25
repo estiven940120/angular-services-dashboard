@@ -1,1 +1,8 @@
-<div></div>
+<div
+  [ngClass]="{
+    'low-status': status < low_status,
+    'mid-status': status >= low_status && status <= high_status,
+    'high-status': status > high_status
+  }"
+  title="{{ status }}%"
+></div>

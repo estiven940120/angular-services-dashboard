@@ -10,6 +10,7 @@ import { ServicesTrackerComponent } from './components/services-tracker/services
 import { ServiceComponent } from './components/service/service.component';
 import { OverallUptimeComponent } from './components/overall-uptime/overall-uptime.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PrincipalComponent } from './pages/principal/principal.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule, 
-    MatToolbarModule
+    MatToolbarModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

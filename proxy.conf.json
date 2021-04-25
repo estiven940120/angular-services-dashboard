@@ -1,0 +1,8 @@
+{
+  "/status/*":{
+    "target": "https://us-central1-cm-devops-294019.cloudfunctions.net/", 
+    "segure": false, 
+    "logLevel": "debug", 
+    "changeOrigin": true
+  }
+}

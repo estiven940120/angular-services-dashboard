@@ -1,94 +1,18 @@
 <div class="main-services-tracker">
   <div class="up-tracker">
     <p class="title-tracker">{{title}}</p>
-    <div class="status-tracker">
+    <div class="status-tracker" *ngIf="status == 'up'">
       <div class="circulo"></div>
       <p class="aux-title">Up</p>
     </div>
+    <div class="status-tracker" *ngIf="status == 'down'">
+      <div class="circulo down"></div>
+      <p class="aux-title">Down</p>
+    </div>
   </div>
   <div class="mid-tracker">
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
-    <app-service></app-service>
+    <app-service  *ngFor="let day of days_status" status={{day}}></app-service>
+
   </div>
   <div class="down-tracker">
     <p class="aux-title">{{percentage}}%</p>

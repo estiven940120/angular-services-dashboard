@@ -9,7 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ServicesTrackerComponent implements OnInit {
 
   @Input() title: String = '';
-  @Input() percentage: String = ''
+  @Input() percentage: String = '';
+  @Input() status: String = '';
+  @Input() days_status: Number[];
+  
 
   constructor() { }
 
