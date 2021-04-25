@@ -1,0 +1,50 @@
+.main-services-tracker{
+  height: 150px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.title-tracker{
+  color: #656565;
+  font-weight: bold;
+}
+
+.aux-title {
+  color: #B9B9B9;
+}
+
+.circulo {
+  width: 14px;
+  height: 14px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #5cb85c;
+  margin-top: 18px;
+  margin-right: 5px;
+}
+
+.up-tracker {
+  margin-left: 17px;
+  margin-right: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.up-tracker .status-tracker {
+  display: flex;
+}
+
+.mid-tracker{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.down-tracker {
+  margin-left: 17px;
+  margin-right: 17px;
+  display: flex;
+  justify-content: space-between;
+}

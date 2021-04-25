@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  box-sizing: boder-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #F5F2F2;
+}
+
+
+
+
