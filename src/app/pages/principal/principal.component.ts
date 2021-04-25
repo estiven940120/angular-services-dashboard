@@ -1,5 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../../components/service/services.service';
+import { environment } from '../../environment/environment';
+
+const _MIN_INTERVAL = environment.refreshIntervalMin;
+console.log(_MIN_INTERVAL);
 
 @Component({
   selector: 'app-principal',
@@ -7,7 +11,7 @@ import { ServicesService } from '../../components/service/services.service';
   styleUrls: [ './principal.component.scss',
   ]
 })
-export class PrincipalComponent  {
+export class PrincipalComponent  implements OnInit {
   public lastUpdated: String;
   public service1: any;
   public service2: any;
@@ -20,10 +24,12 @@ export class PrincipalComponent  {
   public overallUt7: Number;
   public overallUt30: Number;
 
-  constructor(
+  constructor (
     private serviciosService: ServicesService
-  ) { 
+  ) { }
+    getAllServices(){
 
+    
     this.serviciosService.getServices().subscribe( res => {
 
       //Transform date into time UTC-0500 (For Colombia)
@@ -59,7 +65,7 @@ export class PrincipalComponent  {
       let accumulator7Days = 0;
       let accumulator30Days = 0;
 
-      for (let i = 0; i < reversedServices1.length; i++){
+      for (let i = 0; i < 30; i++){
         if(i <7){
           accumulator7Days += (reversedServices2[i] + reversedServices1[i]);
         }
@@ -70,7 +76,11 @@ export class PrincipalComponent  {
       this.overallUt30 = Math.round(accumulator30Days/60);
 
     })
-  }
+    }
 
+    ngOnInit(): void {
+      this.getAllServices();
+      setInterval( () => this.getAllServices(), _MIN_INTERVAL*60*1000);
+    }
 
 }
