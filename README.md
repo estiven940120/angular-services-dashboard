@@ -7,10 +7,10 @@ These are the steps for the project installation:
 
 1. Open a terminal and navigate to the folder in wich you want to download de project
 2. Write the following command in the terminal: `git clone https://github.com/estiven940120/angular-services-dashboard.git`
-3. Go Inside the dowloaded folder with `cd angular-services-dashboard`
+3. Go inside the dowloaded folder running `cd angular-services-dashboard`
 3. Run `npm install` in the terminal
 
-Now you can start your development server see the project working and/or make changes to it. 
+Now you can start your development server to see the project working and/or make changes to it. 
 
 ## Development server
 
