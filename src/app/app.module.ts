@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,7 +12,7 @@ import { ServicesTrackerComponent } from './components/services-tracker/services
 import { ServiceComponent } from './components/service/service.component';
 import { OverallUptimeComponent } from './components/overall-uptime/overall-uptime.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule, 
     MatToolbarModule, 
-    HttpClientModule
+    HttpClientModule, 
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

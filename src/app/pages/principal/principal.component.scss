@@ -1,6 +1,11 @@
 @import '../../sass-files/variables';
 @import '../../sass-files/mixins';
 
+mat-spinner {
+  margin: auto;
+}
+
+
 .main-div-principal{
   width: 100%;
   margin: 0 auto 0 auto;

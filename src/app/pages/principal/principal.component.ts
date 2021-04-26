@@ -24,6 +24,7 @@ export class PrincipalComponent  implements OnInit {
   public overallUt7: Number;
   public overallUt30: Number;
   public operationalUp: number = 0; 
+  isLoading = true;
 
   constructor (
     private serviciosService: ServicesService
@@ -87,6 +88,7 @@ export class PrincipalComponent  implements OnInit {
 
       if( this.service1?.current_status == 'up') this.operationalUp++;
       if( this.service2?.current_status == 'up') this.operationalUp++;
+      this.isLoading = false;
     })
     }
 

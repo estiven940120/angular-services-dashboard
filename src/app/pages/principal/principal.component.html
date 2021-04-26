@@ -1,7 +1,8 @@
 <app-main-status-bar operationalUp={{operationalUp}} lastUpdated="{{ lastUpdated }}"></app-main-status-bar>
 <div class="main-div-principal">
   <p class="uptime-title"><b>UPTIME:</b> Last 30 days</p>
-  <div class="main-tracker">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div class="main-tracker" *ngIf="!isLoading">
     <app-services-tracker
       title="{{ service1?.title }}"
       status="{{ service1?.current_status }}"
