@@ -1,16 +1,18 @@
+@import '../../sass-files/variables';
+
 .main-services-tracker{
   height: 150px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: $white_1;
 }
 
 .title-tracker{
-  color: #656565;
+  color: $gray_3;
   font-weight: bold;
 }
 
 .aux-title {
-  color: #B9B9B9;
+  color: $gray_2;
 }
 
 .circulo {
@@ -19,13 +21,13 @@
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background: $green_1;
   margin-top: 18px;
   margin-right: 5px;
 }
 
 .down{
-  background: red !important;
+  background: $red_1 !important;
 }
 
 .up-tracker {

@@ -1,9 +1,17 @@
+@import '../../sass-files/variables';
+@import '../../sass-files/mixins';
+
 .status-main-bar{
-  height: 60px;
-  background-color: #106EB9;
+  min-height: 60px;
+  background-color: $blue_1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include tablet(){
+  flex-direction: row;
+
+  }
 }
 
 .main-bar-item{
@@ -18,27 +26,57 @@
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #5cb85c;
+  background: $green_1;
   margin-top: 12px;
   margin-right: 5px;
 }
+
+.warning{
+  background-color: $yellow_1 !important;
+}
+
+.danger{
+  background-color: $red_1 !important;
+
+}
+
+
 
 .overall-status{
   display: flex;
 }
 
 p.overall-status {
-  color: #ffffff;
+  color: $white_1;
   font-size: 15px;
   font-weight: bold;
 }
 
 #last-updated p {
-  color: #ffffff;
+  color: $white_1;
   font-size: 15px;
 }
 
-.v-line {
-  border-left: 1px solid #3994DD;
-  height: 80%;;
+.v-line-container{
+  width: 100%;
+  @include tablet(){
+    min-height: 60px;
+    width: 1px;
+  }
+
+  .v-line {
+    height: 1px;
+    border-left: unset;
+    border-bottom: 1px solid $blue_4;
+    width: 95%;
+    margin: 0 auto 0 auto;
+    @include tablet(){
+      margin: unset;
+      height: 52px;
+      margin-top: 4px;
+      border-left: 1px solid $blue_4;
+    }
+  }
 }
+
+

@@ -1,0 +1,55 @@
+@import '../../sass-files/variables';
+@import '../../sass-files/mixins';
+
+.main-overall {
+  min-height: 150px;
+  background-color: $blue_3;
+  color: $white_1;
+  display: flex;
+  flex-direction: column;
+  @include tablet(){
+    flex-direction: row;
+  }
+}
+
+.overall-item{
+  width: 32%;
+  text-align: center;
+  justify-content: center;
+  margin: auto auto auto auto;
+}
+
+.overall-percent{
+  font-size: 20px;
+  font-weight: bold;
+  
+  margin-bottom: 5px;
+
+}
+
+.overall-days{
+  margin-top: 5px;
+
+}
+
+.v-line-container{
+  width: 100%;
+  @include tablet(){
+    min-height: 150px;
+    width: 1px;
+  }
+
+  .v-line {
+    height: 1px;
+    border-left: unset;
+    border-bottom: 1px solid $blue_4;
+    width: 95%;
+    margin: 0 auto 0 auto;
+    @include tablet(){
+      margin: unset;
+      height: 135px;
+      margin-top: 7.5px;
+      border-left: 1px solid $blue_4;
+    }
+  }
+}

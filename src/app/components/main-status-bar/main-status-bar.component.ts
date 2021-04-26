@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main-status-bar',
@@ -6,12 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: [  './main-status-bar.component.scss'
   ]
 })
-export class MainStatusBarComponent implements OnInit {
+export class MainStatusBarComponent {
 
   @Input() lastUpdated: String = "";
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() operationalUp: String = "";
 
 }

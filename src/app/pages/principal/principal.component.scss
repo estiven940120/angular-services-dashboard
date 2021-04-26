@@ -1,10 +1,30 @@
+@import '../../sass-files/variables';
+@import '../../sass-files/mixins';
+
+.main-div-principal{
+  width: 100%;
+  margin: 0 auto 0 auto;
+  @include tablet(){
+    width: 80%;
+  }
+  @include desktop(){
+    width: 60%;
+  }
+}
+
 
 .uptime-title{
-  color: #106EB9;
+  color: $blue_1;
   justify-content: center;
   text-align: right;
-  margin: 100px auto 2px auto;
-  width: 80%;
+  margin: 60px auto 2px auto;
+  width: 90%;
+
+  @include tablet(){
+    width: 100%;
+    margin: 100px auto 2px auto;
+  }
+
 }
 
 .main-tracker {
@@ -13,12 +33,18 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  width: 80%;
-  background-color: #fff;
+  width: 90%;
+  background-color: $white_1;
+
+  @include tablet(){
+    width: 100%;
+  }
+
+
 }
 
 .h-line{
-  border-bottom: 1px solid #F5F2F2;
+  border-bottom: 1px solid $gray_1;
   width: 96%;
 }
 
@@ -27,14 +53,17 @@ app-services-tracker{
 }
 
 .overall-uptime-title{
-  color: #106EB9;
+  color: $blue_1;
   justify-content: center;
   text-align: left;
   margin: 50px auto 0 auto;
-  width: 80%;
+  width: 95%;
+  @include tablet(){
+    width: 100%;
+  }
 }
 
 .final {
-  width: 80%;
+  width: 100%;
   margin: 6px auto 0 auto;
 }

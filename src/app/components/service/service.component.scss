@@ -1,16 +1,26 @@
+@import '../../sass-files/variables';
+@import '../../sass-files/mixins';
+
 div {
   height: 37px;
-  width: 8px;
+  width: 6px;
+  @include tablet(){
+    width: 10px;
+  }
+  @include desktop(){
+    width: 15px;
+  }
+
 }
 
 .low-status {
-  background-color: #DDDDDD;
+  background-color: $gray_4;
 }
 
 .mid-status {
-  background-color: #D6C756;
+  background-color: $yellow_1;
 }
 
 .high-status {
-  background-color: #56C2D6;
+  background-color: $blue_2;
 }

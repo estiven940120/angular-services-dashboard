@@ -2,26 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
+## Installation 
+These are the steps for the project installation: 
+
+1. Open a terminal and navigate to the folder in wich you want to download de project
+2. Write the following command in the terminal: `git clone https://github.com/estiven940120/angular-services-dashboard.git`
+3. Go Inside the dowloaded folder with `cd angular-services-dashboard`
+3. Run `npm install` in the terminal
+
+Now you can start your development server see the project working and/or make changes to it. 
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Have to use `npm start` instead of `ng-serve` because it was necessary to add a proxy configuration in order to get the API data. 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

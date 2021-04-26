@@ -1,25 +1,27 @@
-<app-main-status-bar lastUpdated="{{ lastUpdated }}"></app-main-status-bar>
-<p class="uptime-title"><b>UPTIME:</b> Last 30 days</p>
-<div class="main-tracker">
-  <app-services-tracker
-    title="{{ service1?.title }}"
-    status="{{ service1?.current_status }}"
-    percentage="{{ percentage1 }}"
-    [days_status]="day_status1"
-  ></app-services-tracker>
-  <div class="h-line"></div>
-  <app-services-tracker
-    title="{{ service2?.title }}"
-    status="{{ service2?.current_status }}"
-    percentage="{{ percentage2 }}"
-    [days_status]="day_status2"
-  ></app-services-tracker>
-</div>
-<p class="overall-uptime-title"><b>OVERALL UPTIME:</b> Last 30 days</p>
-<div class="final">
-  <app-overall-uptime
-    overallUt1="{{ overallUt1 }}"
-    overallUt7="{{ overallUt7 }}"
-    overallUt30="{{ overallUt30 }}"
-  ></app-overall-uptime>
+<app-main-status-bar operationalUp={{operationalUp}} lastUpdated="{{ lastUpdated }}"></app-main-status-bar>
+<div class="main-div-principal">
+  <p class="uptime-title"><b>UPTIME:</b> Last 30 days</p>
+  <div class="main-tracker">
+    <app-services-tracker
+      title="{{ service1?.title }}"
+      status="{{ service1?.current_status }}"
+      percentage="{{ percentage1 }}"
+      [days_status]="day_status1"
+    ></app-services-tracker>
+    <div class="h-line"></div>
+    <app-services-tracker
+      title="{{ service2?.title }}"
+      status="{{ service2?.current_status }}"
+      percentage="{{ percentage2 }}"
+      [days_status]="day_status2"
+    ></app-services-tracker>
+  </div>
+  <p class="overall-uptime-title"><b>OVERALL UPTIME:</b> Last 30 days</p>
+  <div class="final">
+    <app-overall-uptime
+      overallUt1="{{ overallUt1 }}"
+      overallUt7="{{ overallUt7 }}"
+      overallUt30="{{ overallUt30 }}"
+    ></app-overall-uptime>
+  </div>
 </div>

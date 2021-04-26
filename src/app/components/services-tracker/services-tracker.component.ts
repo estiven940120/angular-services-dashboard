@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-services-tracker',
@@ -6,17 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: [ './services-tracker.component.scss'
   ]
 })
-export class ServicesTrackerComponent implements OnInit {
+export class ServicesTrackerComponent {
 
   @Input() title: String = '';
   @Input() percentage: String = '';
   @Input() status: String = '';
   @Input() days_status: Number[];
-  
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,5 +1,12 @@
+@import '../../sass-files/variables';
+@import '../../sass-files/mixins';
+
 .header-toolbar {
-  background: #ffffff;
+  background: $white_1;
   height: 92px;
+  justify-content: center;
+  @include tablet(){
+    justify-content: left;
+  }
 
 }

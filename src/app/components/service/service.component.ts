@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { environment } from '../../environment/environment';
 
 const _LOW_STATUS = environment.lowStatus;
@@ -9,7 +9,7 @@ const _HIGH_STATUS = environment.highStatus;
   styleUrls: [ './service.component.scss',
   ]
 })
-export class ServiceComponent implements OnInit {
+export class ServiceComponent {
 
   public low_status: number;
   public high_status: number;
@@ -21,9 +21,5 @@ export class ServiceComponent implements OnInit {
     this.high_status = _HIGH_STATUS;
    }
 
-  
-
-  ngOnInit(): void {
-  }
 
 }

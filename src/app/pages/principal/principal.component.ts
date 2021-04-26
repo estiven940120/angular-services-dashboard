@@ -23,6 +23,7 @@ export class PrincipalComponent  implements OnInit {
   public overallUt1: Number;
   public overallUt7: Number;
   public overallUt30: Number;
+  public operationalUp: number = 0; 
 
   constructor (
     private serviciosService: ServicesService
@@ -33,10 +34,19 @@ export class PrincipalComponent  implements OnInit {
     this.serviciosService.getServices().subscribe( res => {
 
       //Transform date into time UTC-0500 (For Colombia)
-      let curDate = (new Date(res.last_updated))
+      let curDate: any = (new Date(res.last_updated))
                             .toLocaleString("en-US", {timeZone: 'america/bogota'});
-      let curDate2 = curDate.split(' '); 
-      this.lastUpdated = `${curDate2[1]} ${curDate2[2]}`
+      let curDate2: any = curDate.split(' '); 
+      //curDate = `${curDate2[1]} ${curDate2[2]}`;
+      let auxDate = curDate2[1].split(':');
+      if( curDate2[2] == 'PM'){  
+        auxDate[0] = parseInt(auxDate[0]) + 12;
+        if(auxDate[0] == 24) auxDate[0] = 12;
+      }else{
+        if(auxDate[0] == 12) auxDate[0] = 0;
+      }
+
+      this.lastUpdated = `${auxDate[0]}:${auxDate[1]}:${auxDate[2]}`
       //console.log(this.lastUpdated);
 
       //services data
@@ -75,12 +85,17 @@ export class PrincipalComponent  implements OnInit {
       this.overallUt7 = Math.round(accumulator7Days/14);
       this.overallUt30 = Math.round(accumulator30Days/60);
 
+      if( this.service1?.current_status == 'up') this.operationalUp++;
+      if( this.service2?.current_status == 'up') this.operationalUp++;
     })
     }
 
     ngOnInit(): void {
       this.getAllServices();
-      setInterval( () => this.getAllServices(), _MIN_INTERVAL*60*1000);
+      setInterval( () => {
+        this.operationalUp = 0;
+        this.getAllServices()
+      }, _MIN_INTERVAL*60*1000);
     }
 
 }

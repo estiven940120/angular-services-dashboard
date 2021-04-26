@@ -1,11 +1,13 @@
 <div class="status-main-bar">
   <div class= "main-bar-item">
-    <div class="circulo"></div>
+    <div class="circulo" [ngClass]="{'warning': operationalUp == '1', 'danger': operationalUp == '0'}"></div>
     <div>
-      <p class="overall-status">All systems operational</p>
+      <p class="overall-status" *ngIf="operationalUp == '2'"> All systems operational</p>
+      <p class="overall-status" *ngIf="operationalUp == '1'"> One system operational</p>
+      <p class="overall-status" *ngIf="operationalUp == '0'"> All systems down</p>
     </div>
   </div>
-  <div class="v-line"></div>
+  <div class="v-line-container"><div class="v-line"></div></div>
   <div class= "main-bar-item" id="last-updated">
     <p>Refreshed {{lastUpdated}} UTC-0500</p>
   </div>
